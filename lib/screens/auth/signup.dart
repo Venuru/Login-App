@@ -27,16 +27,20 @@ class _SignupState extends State<Signup> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(height: 60.0,),
-                FadeInDown(child: const CustomText(text: "SignUp", fontSize: 24.0, fontWeight: FontWeight.w500, color: AppColors.primaryColor,)),
+                FadeInDown(
+                  child: const CustomText(text: "SignUp", fontSize: 25.0, fontWeight: FontWeight.w600, color: AppColors.primaryColor,)
+                ),
                 const SizedBox(height: 10.0,),
-                FadeInUp(child: const AppLogo(width: 300.0, height: 220.0,)),
+                FadeInUp(
+                  child: const AppLogo(width: 300.0, height: 220.0,)
+                ),
                 const SizedBox(height: 10.0,),
                 const CustomTextfield(hintText: "Enter your name here", labelText: "Name",),
                 const SizedBox(height: 10.0,),
                 const CustomTextfield(hintText: "Enter your email here", labelText: "Email",),
                 const SizedBox(height: 10.0,),
                 const CustomTextfield(hintText: "Enter your password here", labelText: "Password", isObscure: true,),
-                const SizedBox(height: 24.0,),
+                const SizedBox(height: 16.0,),
                 Align(
                   alignment: Alignment.topRight,
                   child: InkWell(
@@ -46,9 +50,12 @@ class _SignupState extends State<Signup> {
                     child: const CustomText(text: "Already have an account?"))
                 ),
                 const SizedBox(height: 25.0,),
-                CustomButton(text: "SignUp", onTap: () {
-                  PageNavigation.navigateTo(context, Login());
-                },)
+                CustomButton(
+                  text: "SignUp",
+                  onTap: () {
+                    PageNavigation.navigateTo(context, Login());
+                  },
+                )
               ],
             ),
           ),

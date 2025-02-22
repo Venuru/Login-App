@@ -6,6 +6,6 @@ class AppAssets {
   }
 
   static String getIcon(String iconName) {
-    return "assets/images/$iconName";
+    return "assets/icons/$iconName";
   }
 }

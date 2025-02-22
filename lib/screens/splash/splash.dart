@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:login_app/components/app_logo.dart';
 import 'package:login_app/components/custom_text.dart';
@@ -26,14 +27,17 @@ class _SplashScreenState extends State<SplashScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AppLogo(width: 350.0, height: 300.0,),
-            SizedBox(height: 20),
-            CustomText(text: "Login App", fontSize: 25.0, fontWeight: FontWeight.w500, color: AppColors.primaryColor,),
+            FadeInDown(
+              child: const AppLogo(width: 350.0, height: 300.0,)),
+            const SizedBox(height: 20),
+            FadeInUp(
+              child: const CustomText(text: "Login App", fontSize: 25.0, fontWeight: FontWeight.w500, color: AppColors.primaryColor,)
+            ),
           ],
         )),
     );
